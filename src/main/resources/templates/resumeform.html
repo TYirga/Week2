@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/resumeform}" th:object="${resume}" method="post">
+    Id:<input type="number" th:field="*{id}" />
+    <span th:if="${#fields.hasErrors('id')}"
+          th:errors="*{id}"></span><br />
+    First Name: <input type="text" th:field="*{firstname}" /><br />
+    <span th:if="${#fields.hasErrors('firstname')}"
+          th:errors="*{firstname}"></span><br />
+   Last Name: <input type="text" th:field="*{lastname}" /><br />
+    <span th:if="${#fields.hasErrors('lastname')}"
+          th:errors="*{lastname}"></span><br />
+    Email: <input type="text" th:field="*{email}" /><br />
+    <span th:if="${#fields.hasErrors('email')}"
+          th:errors="*{email}"></span><br />
+    Education: <input type="text" th:field="*{education}" /><br />
+    <span th:if="${#fields.hasErrors('education')}"
+          th:errors="*{education}"></span><br />
+    Experiance: <input type="text" th:field="*{experiance}" /><br />
+    <span th:if="${#fields.hasErrors('experiance')}"
+          th:errors="*{experianbe}"></span><br />
+    Rating: <input type="text" th:field="*{skills}" /><br />
+    <span th:if="${#fields.hasErrors('skills')}"
+          th:errors="*{skills}"></span><br />
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
