@@ -1,22 +1,19 @@
 package com.example.demo;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class Resume {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private long id;
 
-    @NotNull
-    @Size(min=2)
+public class Resume {
+//@NotNull
+//@Min(1)
+    private long id;
+//@Size(min=3,max=9)
     private String lastname;
 
-   // @NotNull
-   // @Size(min=2)
+
     private String firstname;
 
     //@NotNull

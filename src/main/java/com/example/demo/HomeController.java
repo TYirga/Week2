@@ -18,14 +18,14 @@ public class HomeController {
 
     @PostMapping("/resumeform")
     public String loadFromPage(@ModelAttribute Resume resume, Model model){
-       model.addAttribute("resume", resume);
-        return "resumec";
-  // @PostMapping("/resumeform")
-        // public String loadFromPage(@Valid Resume resume, BindingResult result){
-          // if(result.hasErrors()){
-           // return "resumeform";
-      // }
-      // return "resumeform:";
-    }
+        model.addAttribute("resume", resume);
+        return "resumec";}
+       /*@PostMapping("/resumeform")
+         public String loadFromPage(@Valid Resume resume, BindingResult result){
+         if(result.hasErrors()){
+        return "resumeform";
+        }
+         return "resumec:";
+    }*/
 
 }
